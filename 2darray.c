@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main(){
-   /* 2D array declaration*/
+  
    int disp[2][3];
-   /*Counter variables for the loop*/
+   
    int i, j;
    for(i=0; i<2; i++) {
       for(j=0;j<3;j++) {
@@ -10,7 +10,7 @@ int main(){
          scanf("%d", &disp[i][j]);
       }
    }
-   //Displaying array elements
+  
    printf("Two Dimensional array elements:\n");
    for(i=0; i<2; i++) {
       for(j=0;j<3;j++) {
