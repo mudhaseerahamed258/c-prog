@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-int n = sizeof(arr)/sizeof(arr[0]);
+int main() {
+    int arr[] = {0, 160, 180, 270, 160, 230, 210, 190, 0};
+    int n = sizeof(arr)/sizeof(arr[0]);
     int temp;
 
     printf("Original Array: ");
@@ -21,7 +23,5 @@ int n = sizeof(arr)/sizeof(arr[0]);
     return 0;
 }
 
-sample test case:
-
-Original Array: 16 18 27 16 23 21 19 
-Reversed Array: 19 21 23 16 27 18 16 
+output: Original Array: 0 160 180 270 160 230 210 190 0 
+Reversed Array: 0 190 210 230 160 270 180 160 0 
