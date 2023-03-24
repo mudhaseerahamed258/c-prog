@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int* findMinMax(int arr[], int size) {
+    static int result[2];
+    int min = arr[0], max = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    result[0] = min;
+    result[1] = max;
+    return result;
+}
+
+int main() {
+    int arr[100], size;
+    printf("Number of values you want to input: ");
+    scanf("%d", &size);
+    printf("Input %d values\n", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int* result = findMinMax(arr, size);
+    printf("Minimum value is: %d\n", result[0]);
+    printf("Maximum value is: %d\n", result[1]);
+    return 0;
+}
+
+
+
+OUTPUT:
+
+Number of values you want to input: 5
+Input 5 values
+25 11 35 65 20
+Minimum value is: 11
+Maximum value is: 65
