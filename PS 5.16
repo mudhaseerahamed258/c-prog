@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+    int num_students;
+    printf("Enter the number of students: ");
+    scanf("%d", &num_students);
+
+    // Use nested loops to get details for each student
+    for (int i = 0; i < num_students; i++) {
+        printf("Enter details for student %d:\n", i+1);
+        for (int j = 0; j < 3; j++) {
+            if (j == 0) {
+                char name[50];
+                printf("Enter name: ");
+                scanf("%s", name);
+                printf("Name: %s\n", name);
+            } else if (j == 1) {
+                int age;
+                printf("Enter age: ");
+                scanf("%d", &age);
+                printf("Age: %d\n", age);
+            } else {
+                int roll_no;
+                printf("Enter roll number: ");
+                scanf("%d", &roll_no);
+                printf("Roll Number: %d\n", roll_no);
+            }
+        }
+    }
+    return 0;
+}
+
+
+OUTPUT:
+
+Enter the number of students: 2
+Enter details for student 1:
+Enter name: John
+Name: John
+Enter age: 21
+Age: 21
+Enter roll number: 1001
+Roll Number: 1001
+Enter details for student 2:
+Enter name: Sarah
+Name: Sarah
+Enter age: 19
+Age: 19
+Enter roll number: 1002
+Roll Number: 1002
